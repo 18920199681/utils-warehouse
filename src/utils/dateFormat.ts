@@ -1,7 +1,9 @@
 /**
 * 时间格式化
 */
-export const dateFormat = (date, fmt) => {
+export const dateFormat = (date: any, fmt: string) => {
+  fmt = fmt || "YYYY-MM-DD hh:mm:ss";
+
   var obj = {
     "M+": date.getMonth() + 1,
     "D+": date.getDate(),

@@ -25,7 +25,7 @@
  * 
  */
 
-export function numberFormat(number, after, before, replace) {
+export function numberFormat(number: string, after: number, before: number, replace: string) {
   // 号码长度最少为8位
   let limitLength = 8;
 

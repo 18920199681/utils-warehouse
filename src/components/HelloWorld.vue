@@ -1,5 +1,7 @@
 <template>
-  <div>HelloWorld</div>
+  <div>
+    <span>HelloWorldHelloWorldHelloWorld</span>
+  </div>
 </template>
 
 <script>
@@ -16,7 +18,18 @@ export default {
     };
   },
   mounted() {
-    console.log("当前日期", dateFormat(new Date(), "YYYY-MM-DD"));
+    console.log("当前日期", dateFormat(new Date()));
   },
 };
 </script>
+
+<style scoped lang="scss">
+@import "../assets/styles/public.scss";
+
+span {
+  width: 60px;
+  background: $main-color;
+  @include ellipsis(3);
+  margin-bottom: 10px;
+}
+</style>
