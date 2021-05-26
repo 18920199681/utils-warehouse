@@ -2,7 +2,9 @@
   "name": "utils-warehouse",
   "version": "0.0.0",
   "scripts": {
-    "start": "vite --open",
+    "start": "vite",
+    "start:dev": "cross-env NODE_ENV=development vite",
+    "start:prod": "cross-env NODE_ENV=production vite",
     "build": "vite build"
   },
   "dependencies": {
@@ -11,6 +13,7 @@
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.4",
+    "cross-env": "^5.2.1",
     "sass": "^1.34.0",
     "typescript": "^4.2.4",
     "vite": "^1.0.0-rc.13"
