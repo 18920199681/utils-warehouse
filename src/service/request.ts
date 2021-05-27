@@ -1,32 +1,28 @@
 import axios from "axios"
 
-const requestConfigAdapter = config => {
-
+const requestConfigAdapter = (config: any) => {
   const { base, url, isMock } = config;
 
-  let API_BASE = import.meta.env[base];
-
-  if (isMock) {
-    API_BASE = import.meta.env.VITE_MOCK_ROOT;
-  }
+  let API_BASE: string = import.meta.env[base];
+  if (isMock) API_BASE = import.meta.env.VITE_MOCK_ROOT;
 
   return { url: `${API_BASE}${url}` };
 };
 
-const tokenPlugin = config => {
+const tokenPlugin = (config: any) => {
   return config;
 }
 
-const handleRequestErr = err => {
+const handleRequestErr = (err: any) => {
 
   return Promise.reject(err.response);
 }
 
-const handleResponse = res => {
+const handleResponse = (res: any) => {
   return res;
 }
 
-// const responseData = res => res.data;
+// const responseData = (res: any) => res.data;
 
 axios.interceptors.request.use(tokenPlugin, handleRequestErr);
 
