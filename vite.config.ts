@@ -11,7 +11,7 @@ const envFiles = [
 
 for (const file of envFiles) {
   const envConfig = dotenv.parse(fs.readFileSync(file))
-  for (const k in envConfig) {
+  for (let k in envConfig) {
     process.env[k] = envConfig[k]
   }
 }

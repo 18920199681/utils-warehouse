@@ -2,12 +2,12 @@
   "name": "utils-warehouse",
   "version": "0.0.0",
   "scripts": {
-    "start": "vite",
     "start:dev": "cross-env NODE_ENV=development vite",
     "start:prod": "cross-env NODE_ENV=production vite",
     "build": "vite build"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "vue": "^3.0.4",
     "vue-router": "4.0.0-beta.6"
   },

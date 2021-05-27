@@ -11,7 +11,12 @@
 		"noImplicitAny": false,
 		"sourceMap": false,
 		"allowJs": true,
-		"jsx": "react"
+		"jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+	  // 根据别名配置相关路径
+      "/@/*": ["./src/*"]
+    }
 	},
 	// 匹配列表（属于自动指定该路径下的所有ts相关文件）
 	"include": [

@@ -6,6 +6,7 @@
 
 <script>
 import { dateFormat } from "/@/utils/dateFormat";
+import Apis from "/@/service/apis/test";
 
 export default {
   name: "HelloWorld",
@@ -19,6 +20,7 @@ export default {
   },
   mounted() {
     console.log("当前日期", dateFormat(new Date()));
+    Apis.queryTest({});
   },
 };
 </script>
