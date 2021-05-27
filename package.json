@@ -2,8 +2,9 @@
   "name": "utils-warehouse",
   "version": "0.0.0",
   "scripts": {
-    "start:dev": "cross-env NODE_ENV=development vite",
-    "start:prod": "cross-env NODE_ENV=production vite",
+    "start": "cross-env vite",
+    "start:dev": "cross-env vite --mode development",
+    "start:prod": "cross-env vite --mode production",
     "build": "vite build"
   },
   "dependencies": {

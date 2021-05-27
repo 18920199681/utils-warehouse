@@ -4,7 +4,7 @@ export default {
   // test
   queryTest: (params = {}) => {
     request.get({
-      base: 'DOMAIN',
+      base: 'VITE_BASEURL',
       url: `/api/get-city-list`,
       payload: params,
       isMock: false

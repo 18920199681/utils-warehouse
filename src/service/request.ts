@@ -1,32 +1,13 @@
 import axios from "axios"
-// import dotenv from "dotenv"
-// import fs from "fs";
-
-// const envFiles = [
-//     /** default file */ `.env`,
-//     /** mode file */ `.env.${process.env.NODE_ENV}`
-// ]
-
-// for (const file of envFiles) {
-//   console.log(222, file);
-//   // const envConfig = dotenv.parse(fs.readFileSync(file))
-//   // for (const k in envConfig) {
-//   //   process.env[k] = envConfig[k]
-//   // }
-// }
-
-const MOCK_ROOT = 'https://yapi.kuaibaobao.com/mock/57';
 
 const requestConfigAdapter = config => {
 
   const { base, url, isMock } = config;
-  console.log(111, process.env);
 
-  // let API_BASE = base;
-  let API_BASE = process.env[base];
+  let API_BASE = import.meta.env[base];
 
   if (isMock) {
-    API_BASE = MOCK_ROOT;
+    API_BASE = import.meta.env.VITE_MOCK_ROOT;
   }
 
   return { url: `${API_BASE}${url}` };
