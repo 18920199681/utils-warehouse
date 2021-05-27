@@ -5,7 +5,9 @@
     "start": "cross-env vite",
     "start:dev": "cross-env vite --mode development",
     "start:prod": "cross-env vite --mode production",
-    "build": "vite build"
+    "build": "vite build",
+    "build:dev": "vite build --mode development",
+    "build:prod": "vite build --mode production"
   },
   "dependencies": {
     "axios": "^0.21.1",
